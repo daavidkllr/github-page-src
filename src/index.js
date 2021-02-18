@@ -1,4 +1,4 @@
-import "../scss/index.scss";
+import "./scss/index.scss";
 
 import "particles.js";
 particlesJS.load('background-particles', 'assets/particles.json', function() {
