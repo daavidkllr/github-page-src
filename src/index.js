@@ -7,7 +7,7 @@ particlesJS.load('background-particles', 'assets/particles.json', function() {
 
 import Typed from 'typed.js';
 new Typed(
-	'.headline-container__headline.animate__typed',
+	'.hero-container__hero.animate__typed',
 	{
 		strings: ['David Keller', 'Developer'],
 		smartBackspace: true,
@@ -22,3 +22,10 @@ new Typed(
 		fadeOut: false,
 	}
 );
+
+document.getElementById('scroll-down-button').addEventListener('click', () => {
+	const anchor = document.querySelector('#aboutme-main-container');
+	anchor.scrollIntoView({
+		behavior: "smooth"
+	});
+});
