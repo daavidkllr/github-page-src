@@ -1,0 +1,167 @@
+#hero-main-container {
+    width: 100%;
+    height: 100%;
+}
+
+#hero-container {
+    margin-top: 200px;
+    font-weight: 800;
+    font-size: 94pt;
+    z-index: 30;
+}
+
+#hero-container__typewriter {
+    display: flex;
+
+    .hero-container__hero {
+        color: $color-primary;
+    }
+
+    .typed-cursor {
+        color: $color-primary;
+        position: relative;
+        top: -25px;
+    }
+}
+
+.hero-container__hero {
+    position: relative;
+    color: $color-dark;
+    margin: -10px 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+#background-particles {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#background-profile {
+    position: absolute;
+    top: 150px;
+    right: 25px;
+    margin: 0 auto;
+    background-image: url('../images/rsz_david_dark.jpg');
+    background-repeat: no-repeat;
+    background-size: 98%;
+    height: 65%;
+    width: 1000px;
+    display: block;
+    box-shadow: inset 0 0 30px 30px $color-black;
+    border-radius: 35%;
+    z-index: 20;
+
+    &.animate__customFadeInRight {
+        animation-name: fadeInOpacity;
+        animation-timing-function: cubic-bezier(.34, .64, .3, .97);
+        animation-iteration-count: 1;
+        animation-delay: 1s;
+    }
+
+    @keyframes fadeInOpacity {
+        0% {
+            opacity: 0;
+            top: 250px;
+        }
+        100% {
+            opacity: 1;
+            top: 125px;
+        }
+    }
+}
+
+.animate__fadeInTransition {
+    opacity: 1;
+    animation-name: fadeInTransition;
+    animation-timing-function: cubic-bezier(.34, .64, .3, .97);
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+
+    @keyframes fadeInTransition {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+#scroll-down-button {
+    position: absolute;
+    bottom: 75px;
+    left: calc(50% - 50px);
+    z-index: 50;
+    width: 100px;
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+        cursor: pointer;
+
+        #scroll-down-button__label {
+            transition: 0.35s;
+            opacity: 1;
+        }
+
+        #scroll-down-button__arrow {
+            transition: 0.35s;
+            opacity: 1;
+        }
+    }
+}
+
+#scroll-down-button__label {
+    display: block;
+    position: relative;
+    top: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 10pt;
+    opacity: .35;
+    text-align: center;
+}
+
+#scroll-down-button__inner {
+    margin-top: 15px;
+    text-align: center;
+    -moz-animation: bounce 3s infinite;
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+}
+
+#scroll-down-button__arrow {
+    opacity: .35;
+
+    border: solid $color-primary;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 5px;
+
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    60% {
+        -moz-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}

@@ -5,8 +5,11 @@
 @import "external/flexbox-grid";
 @import "external/animate";
 
+@import "components/navigation";
 @import "components/hero";
 @import "components/about-me";
+@import "components/main-skills";
+@import "components/contact-me";
 
 :root {
     --animate-delay: 0.5s;
@@ -23,5 +26,5 @@ body {
     color: $color-dark;
 }
 * {
-    @include noHover;
+    @include noSelect;
 }

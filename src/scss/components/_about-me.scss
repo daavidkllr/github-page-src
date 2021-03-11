@@ -1,0 +1,47 @@
+#aboutme-main-container {
+    height: 75%;
+    width: 100%;
+    background: $color-white;
+    padding-bottom: 100px; // todo: remove thiss
+
+    .text-container {
+        width: 1000px;
+        margin-left: 150px !important;
+    }
+
+    #social-links {
+        margin-left: 150px !important;
+        margin-top: 50px;
+
+        a {
+            float: left;
+            margin-right: 20px;
+            width: 25px;
+            display: block;
+
+            opacity: .5;
+
+            transition: 0.35s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        #icon-github {
+            background: url("../images/github.svg");
+            height: 25px;
+            width: 25px;
+            display: block;
+            background-size: 100% 100%;
+        }
+
+        #icon-email {
+            background: url("../images/email.svg");
+            height: 25px;
+            width: 25px;
+            display: block;
+            background-size: 100% 100%;
+        }
+    }
+}
